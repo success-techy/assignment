@@ -7,7 +7,7 @@ pipeline {
    stage('download the files') {
     steps {
 	
-	git branch: 'main', url: 'https://github.com/success-techy/assignment.git'
+	git branch: 'release', url: 'https://github.com/success-techy/assignment.git'
 	
 	}
 }
