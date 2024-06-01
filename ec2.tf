@@ -37,7 +37,7 @@ resource "aws_instance" "centos_instance" {
   instance_type = "t2.micro"
   key_name = "chaco-key"
   security_groups = [aws_security_group.demo_var.id]
-  subnet_id = "chaco-key"
+  subnet_id = "subnet-07fb9578b80d60728"
 
   tags = {
     Name = "c8.local"
@@ -61,7 +61,7 @@ resource "aws_instance" "ubuntu_instance" {
   instance_type = "t2.micro"
   key_name = "chaco-key"
   security_groups = [aws_security_group.demo_var.id]
-  subnet_id = "ami-0d3a2960fcac852bc"
+  subnet_id = "subnet-07fb9578b80d60728"
   tags = {
     Name = "u21.local"
   }
