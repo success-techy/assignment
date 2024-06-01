@@ -36,7 +36,7 @@ resource "aws_instance" "centos_instance" {
   ami = "ami-0d3a2960fcac852bc"
   instance_type = "t2.micro"
   key_name = "chaco-key"
-  security_groups = [aws_security_group.demo_var.id]
+  vpc_security_group_ids = [aws_security_group.demo_var.id]
   subnet_id = "subnet-07fb9578b80d60728"
 
   tags = {
@@ -60,7 +60,7 @@ resource "aws_instance" "ubuntu_instance" {
   ami = "ami-0705384c0b33c194c"
   instance_type = "t2.micro"
   key_name = "chaco-key"
-  security_groups = [aws_security_group.demo_var.id]
+  vpc_security_group_ids = [aws_security_group.demo_var.id]
   subnet_id = "subnet-07fb9578b80d60728"
   tags = {
     Name = "u21.local"
